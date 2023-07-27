@@ -1,0 +1,16 @@
+name: "testing my gh-action"
+
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  test-gh-action:
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+    - name: Use Python 3
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.11"
+    - name: Use MY GH Action
+      uses: AykutBurak/test-gh-action@v1
